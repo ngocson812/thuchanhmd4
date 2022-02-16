@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <div>
+            <button>
+                <a href="/home">Back to homepage</a>
+            </button>
+        </div>
+        <div>
+            <div>
+                <h1>City Edit</h1>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Area</th>
+                        <th>Population</th>
+                        <th>GDP</th>
+                        <th>Description</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr th:object="${city}">
+                        <td><input th:field="*{name}"></td>
+                        <td><input th:field="*{area}"></td>
+                        <td><input th:field="*{population}"></td>
+                        <td><input th:field="*{gdp}"></td>
+                        <td><input th:field="*{description}"></td>
+                        <td th:text="*{country.nameCountry}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

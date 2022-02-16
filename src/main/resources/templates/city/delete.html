@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <div>
+        <div>
+            <button>
+                <a href="/home">Back to homepage</a>
+            </button>
+        </div>
+        <div>
+            <div>
+                <h1>Delete student</h1>
+            </div>
+            <div>
+                <table th:object="${delete}">
+                    <h2>Do you want to Delete ?</h2>
+                    <td>
+                        <button type="submit"> Yes, Delete City</button>
+                    </td>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
